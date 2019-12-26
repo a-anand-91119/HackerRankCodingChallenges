@@ -28,10 +28,10 @@ class Result {
 		for (int i = 0; i < size; i++)
 			for (int j = 0; j < size; j++) {
 				if(i == j) 
-					primaryDiagonalSum += Math.abs(arr.get(i).get(j));
+					primaryDiagonalSum += arr.get(i).get(j);
 				
-				if(i+j == size) 
-					secondaryDiagonalSum += Math.abs(arr.get(i).get(j));
+				if(i+j == size - 1) 
+					secondaryDiagonalSum += arr.get(i).get(j);
 			}
 		
 		return Math.abs(primaryDiagonalSum - secondaryDiagonalSum);
